@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopify Meeting</title>
+  <link rel="icon" type="image/x-icon" href="/icon.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="style/style.css"/>
+  <script type="text/javascript" src="lib/rtc-lib-core.js"></script>
+  <script type="text/javascript" src="lib/rtc-lib.js"></script>
+</head>
+<body>
+
+  <div class="header-section-wrapper" style="min-height: 6vh;">
+    <!-- <img src="assets/altegon_logo.jpg" alt="Altegon" srcset=""> -->
+  </div>
+
+  <div class="video-section">
+    <div id="call">
+      <div class="video-div" id="myVideo">
+      </div>
+
+      <div class="end-call-btn">
+
+        <div class="left-div">
+          <a href="https://altegon.com/" title="https://altegon.com/">
+            <img src="assets/altegon_logo.jpg" alt="Altegon Logo" srcset="">
+          </a>
+        </div>
+
+        <div class="button-div">
+          <button id="button" onclick="endstream()">End Stream</button>
+        </div>
+
+
+        <div class="message-div">
+          <div class="message-icon" onclick="toggleSendWrapper()">
+            <img src="assets/message-icon.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="main-div">
+        <div class="image-div">
+          <div class="live">
+            <img src="assets/live-logo.gif" alt="">
+          </div>
+          <div class="user-div">
+            <div class="eye-logo">
+              <img src="assets/eye.png" alt="">
+            </div>
+            <span id="count">0</span>
+          </div>
+        </div>
+
+        <div class="shoes-price-div">
+          <div class="circle">
+            <img id="image" src="" alt="shoes" srcset="">
+          </div>
+          <div class="detail-section">
+            <h2 id="productname"></h2>
+            <h2 id="productprice" style="color: grey;"></h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="chat-box" class="chat-box">
+        <div id="mes-box">
+          <div id="new-message" class="container new-message">
+            <div id="chat-inbox_msg" class="chat-inbox_msg"></div>
+          </div>
+          <div class="message-input"></div>
+        </div>
+
+
+        <div class="send-wrapper" style="display: flex; justify-content: center;">
+          <input class="msg-input" type="text" placeholder="add your message here..." id="message"
+            onkeydown="handleKeyDown(event)" />
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="Altegonfooter">
+    <div class="content">
+      <h3>www.altegon.com</h3>
+    </div>
+  </div>
+
+
+</body>
+
+<script src="lib/broadcaster.js" onload="onLoad()"></script>
+
+</html>

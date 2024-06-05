@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talk Show</title>
+  <link rel="icon" type="image/x-icon" href="/icon.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="style/style.css"/>
+  <script type="text/javascript" src="lib/rtc-lib-core.js"></script>
+  <script type="text/javascript" src="lib/rtc-lib.js"></script>
+</head>
+
+<body>
+
+  <div class="viewer-parent">
+    <div class="header-section-wrapper" style="min-height: 6vh;">
+      <!-- <img src="assets/altegon_logo.jpg" alt="Altegon" srcset=""> -->
+    </div>
+
+    <div class="video-div" id="call">
+
+    </div>
+
+
+    <div class="main-div-viewer">
+
+      <div class="image-div">
+        <div class="live" onclick="toggleFullScreen()">
+          <img src="assets/live-logo.gif" alt="live">
+        </div>
+        <div class="user-div">
+          <div class="eye-logo">
+            <img src="assets/eye.png" alt="">
+          </div>
+          <span id="count">0</span>
+        </div>
+      </div>
+
+      <div class="shoes-price-div">
+        <div class="circle">
+          <img id="image" src="" alt="shoes" srcset="">
+        </div>
+        <div class="detail-section">
+          <h2 id="productname"></h2>
+          <h2 id="productprice" style="color: grey;"></h2>
+          <span id="productcurreny"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="chat-box" class="chat-box">
+      <div id="mes-box">
+        <div id="new-message" class="container new-message">
+          <div id="chat-inbox_msg" class="chat-inbox_msg"></div>
+        </div>
+        <div class="message-input"></div>
+      </div>
+
+
+      <div class="send-wrapper">
+        <input class="msg-input" type="text" placeholder="add your message here..." id="message"
+          onkeydown="handleKeyDown(event)" />
+
+      </div>
+
+    </div>
+
+    <div class="emojis">
+      <span class="emoji-thumbs-up" onclick="showEmoji('thumbs-up')">
+        <span class="emoji">👍</span>
+      </span>
+      <span class="emoji-heart-up" onclick="showEmoji('heart')">
+        <span class="emoji">❤️</span>
+      </span>
+    </div>
+
+    <!-- Container for animated emojis -->
+    <div class="emoji-animation-container" id="emoji-animation-container"></div>
+
+
+
+
+
+
+    <div class="Altegonfooter">
+      <div class="content">
+        <h3>www.altegon.com</h3>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script type="text/javascript" src="lib/viewer.js" onload="onLoad()"></script>
+
+</html>
